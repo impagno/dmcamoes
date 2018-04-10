@@ -71,6 +71,7 @@ public class ExternoActivity extends AppCompatActivity {
                     outputStream = openFileOutput("arquivo_interno.txt", Context.MODE_PRIVATE);
                     outputStream.write(txtSavar.getText().toString().getBytes());
                     outputStream.close();
+                    Toast.makeText(getBaseContext(), "Arquivo salvo.", Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     Toast.makeText(getBaseContext(), "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }

@@ -35,6 +35,7 @@ public class CacheActivity extends AppCompatActivity {
                     FileOutputStream out = new FileOutputStream(file);
                     out.write(txtSalvar.getText().toString().getBytes());
                     out.close();
+                    Toast.makeText(getBaseContext(), "Arquivo salvo.", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     // Error while creating file
                     Toast.makeText(getBaseContext(), "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -51,7 +52,7 @@ public class CacheActivity extends AppCompatActivity {
                     FileInputStream in = new FileInputStream(file);
                     in.read(buffer);
                     in.close();
-                    txtLer.setText(buffer.toString());
+                    txtLer.setText(new String(buffer));
                 } catch (IOException e) {
                     Toast.makeText(getBaseContext(), "Erro: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
