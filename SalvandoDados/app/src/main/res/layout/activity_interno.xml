@@ -6,4 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".InternoActivity">
 
+    <EditText
+        android:id="@+id/txtInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalvarInterno" />
+
+    <Button
+        android:id="@+id/btnSalvarInterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInput" />
+
+    <Button
+        android:id="@+id/btnLerInterno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:text="Ler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOut" />
 </android.support.constraint.ConstraintLayout>
