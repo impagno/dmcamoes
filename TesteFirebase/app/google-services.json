@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "288252925485",
+    "firebase_url": "https://testeandroid-impagno.firebaseio.com",
+    "project_id": "testeandroid-impagno",
+    "storage_bucket": "testeandroid-impagno.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288252925485:android:bf16dcac38c337fa",
+        "android_client_info": {
+          "package_name": "edu.impagno.testefirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288252925485-o7v49rhkv31uuf40ugh5j6r7mqt7v4lo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.impagno.testefirebase",
+            "certificate_hash": "361348318d039184d44f43d20b010842c1c5d3ae"
+          }
+        },
+        {
+          "client_id": "288252925485-mrqmkstk3l317ci39m4pa5rsacsnhks1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr7bfAM1YAB4_1iSfSAFEHhX3r2fOAntk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288252925485-mrqmkstk3l317ci39m4pa5rsacsnhks1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
