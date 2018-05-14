@@ -8,10 +8,16 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="203dp"
-        android:layout_height="76dp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="16dp">
+        android:layout_width="321dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/rbPF"
@@ -32,7 +38,7 @@
     <FrameLayout
         android:id="@+id/frmLayout"
         android:layout_width="330dp"
-        android:layout_height="375dp"
+        android:layout_height="448dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

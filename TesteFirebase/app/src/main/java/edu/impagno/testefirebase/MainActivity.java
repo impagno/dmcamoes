@@ -15,18 +15,23 @@ import edu.impagno.testefirebase.Model.Produto;
 public class MainActivity extends AppCompatActivity {
 
     private DatabaseReference db = FirebaseDatabase.getInstance().getReference();
+    private DatabaseReference db1 = db.child("produtos");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        db.child("produtos").child("001").addListenerForSingleValueEvent(new ValueEventListener() {
+        //Produto p = new Produto("Sabão em pó", 5);
+        //db.child("produtos").child("003").setValue(p);
+        //Log.i("BANCODADOS", p.toString());
+
+        db1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Produto produto = dataSnapshot.getValue(Produto.class);
 
-                Log.i("BANCODADOS", produto.toString());
+
+                Log.i("BANCODADOS", dataSnapshot.getValue().toString());
             }
 
             @Override
