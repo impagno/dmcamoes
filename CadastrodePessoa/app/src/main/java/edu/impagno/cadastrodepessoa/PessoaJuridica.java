@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -28,6 +30,8 @@ public class PessoaJuridica extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private Button btnEnviar;
 
     public PessoaJuridica() {
         // Required empty public constructor
@@ -64,7 +68,17 @@ public class PessoaJuridica extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pessoa_juridica, container, false);
+        final View view = inflater.inflate(R.layout.fragment_pessoa_juridica, container, false);
+
+        btnEnviar = view.findViewById(R.id.btnEnviar);
+        btnEnviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Cadsatrando PESSOA JURÍDICA", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
