@@ -74,7 +74,8 @@ public class PessoaFisica extends Fragment {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Cadastrando PESSOA FÍSICA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Cadastrando PESSOA FÍSICA. "
+                        + mParam1 + ": " + mParam2, Toast.LENGTH_SHORT).show();
             }
         });
 
