@@ -74,7 +74,8 @@ public class PessoaJuridica extends Fragment {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Cadsatrando PESSOA JURÍDICA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Cadsatrando PESSOA JURÍDICA."
+                        + mParam1 + ": " + mParam2, Toast.LENGTH_SHORT).show();
             }
         });
 
