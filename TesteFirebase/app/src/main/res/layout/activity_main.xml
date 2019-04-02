@@ -13,23 +13,15 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/fbPF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Pessoa Física"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="26dp" />
-
-        <RadioButton
-            android:id="@+id/rbPJ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pessoa Jurídica"
-            tools:layout_editor_absoluteX="150dp"
-            tools:layout_editor_absoluteY="26dp" />
-    </RadioGroup>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="117dp"
+        android:text="Teste do FIREBASE. As informações estarão no LOGCAT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
