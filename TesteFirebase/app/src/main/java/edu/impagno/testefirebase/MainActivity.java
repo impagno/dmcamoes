@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.w("BANCODADOS", "deu merda", databaseError.toException());
+                Log.w("BANCODADOS", "Houve um problema!", databaseError.toException());
             }
         });
 
