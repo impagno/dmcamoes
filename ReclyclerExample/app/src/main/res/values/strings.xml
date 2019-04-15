@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ReclyclerExample</string>
+
+    <string name="delete_view">Apagar</string>
+    <string name="more_view">Adicionar</string>
+
+</resources>
