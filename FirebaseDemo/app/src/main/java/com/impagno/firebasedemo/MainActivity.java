@@ -3,6 +3,9 @@ package com.impagno.firebasedemo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -22,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference ref = database.getReference();
 
     private TextView txtView;
+    private EditText txtNome;
+    private EditText txtValor;
+    private Button button;
 
 
     @Override
@@ -29,8 +35,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DatabaseReference child = ref.child("produtos");
-        txtView = findViewById(R.id.textView);
+        final DatabaseReference child = ref.child("produtos");
+        txtNome = findViewById(R.id.txtNome);
+        txtValor = findViewById(R.id.txtValor);
+        txtView = findViewById(R.id.txtLista);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                child.setValue(UUID.randomUUID().toString(), new Produto(
+                        txtNome.getText().toString(),
+                        txtValor.getText().toString()
+                ));
+            }
+        });
 
         // creating a map with the values
         //Map<String, Produto> produtos = new HashMap<>();
