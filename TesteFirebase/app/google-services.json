@@ -15,16 +15,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "288252925485-o7v49rhkv31uuf40ugh5j6r7mqt7v4lo.apps.googleusercontent.com",
+          "client_id": "288252925485-eehqn7djtal1f61uvgsu6jggoe8g6eno.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "edu.impagno.testefirebase",
-            "certificate_hash": "361348318d039184d44f43d20b010842c1c5d3ae"
+            "certificate_hash": "28871db1f19fb992b1abf3499ca977005b240d62"
           }
-        },
-        {
-          "client_id": "288252925485-mrqmkstk3l317ci39m4pa5rsacsnhks1.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
@@ -33,20 +29,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "288252925485-mrqmkstk3l317ci39m4pa5rsacsnhks1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

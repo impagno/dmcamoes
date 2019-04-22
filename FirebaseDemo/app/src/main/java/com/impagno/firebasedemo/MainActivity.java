@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                child.setValue(UUID.randomUUID().toString(), new Produto(
-                        txtNome.getText().toString(),
-                        txtValor.getText().toString()
-                ));
+                String nome = txtNome.getText().toString();
+                String valor = txtValor.getText().toString();
+                child.child(UUID.randomUUID().toString()).setValue(new Produto(nome, valor));
+                txtNome.setText("");
+                txtNome.setFocusable(true);
+                txtValor.setText("");
             }
         });
 
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         // put the values into the database
         //child.setValue(produtos);
 
-        child.addListenerForSingleValueEvent(new ValueEventListener() {
+        child.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 txtView.setText(dataSnapshot.getValue().toString());
