@@ -1,5 +1,6 @@
 package com.impagno.firebasedemo;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtNome;
     private EditText txtValor;
     private Button button;
+    private Button btnLogout;
 
 
     @Override
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         txtValor = findViewById(R.id.txtValor);
         txtView = findViewById(R.id.txtLista);
         button = findViewById(R.id.button);
+        btnLogout = findViewById(R.id.btnLogout);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
                 txtNome.setText("");
                 txtNome.setFocusable(true);
                 txtValor.setText("");
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
         });
 
